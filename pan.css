@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+}
+html, body, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 14px/1.8 arial;
+    background-color: #ccc ;
+}
+ul li{
+    list-style: none;
+}
+.light{
+    color: #CCCCCC;
+}
+h4{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.wrap{
+    margin: 20px auto;
+    padding: 80px 50px;
+    max-width: 1000px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+section{
+    margin-bottom: 40px;
+}
+/*
+ * 我的个人信息
+ */
+.personal:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.personal .my .circle{
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #000;
+}
+.personal .my span{
+    font-size: 30px;
+    font-weight: normal;
+    color: white;
+}
+.personal .my span:nth-child(1){
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
+.personal .my span:nth-child(2){
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+}
+.personal .my .circle:before{
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 81px;
+    left: 40px;
+    transform: rotateZ(-50deg);
+    width: 80px;
+    border-top: 2px solid #FFFFFF;
+}
+.personal h1{
+    font-size: 44px;
+    font-weight: normal;
+}
+.personal p{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.personal .contact dt{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 4px solid;
+}
+.personal .contact dd>strong{
+    padding-right: 20px;
+}
+/*
+ * 响应式
+ */
+@media only screen and (min-width: 761px) {
+    .personal .my{
+        float: left;
+        width: 50%;
+    }
+    .personal .contact{
+        float: left;
+        width: 50%;
+    }
+    .personal .my .circle{
+        float: left;
+    }
+    .personal h1,
+    .personal p{
+        margin-left:190px ;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .personal .my .circle{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .personal .contact{
+        margin-top: 25px;
+    }
+    .personal .contact dt{
+        width: 50%;
+    }
+}
+/*
+ * 经历和教育
+ */
+.container section ul{
+    margin-top: 10px;
+}
+.container section ul>li{
+    position: relative;
+    padding-left: 40px ;
+    padding-bottom: 10px;
+    border-left: 2px solid;
+}
+
+.container section h3{
+    padding-bottom: 10px;
+    width: 350px;
+    border-bottom: 1px solid #ccc;
+}
+.container section li:before{
+    content: " ";
+    position: absolute;
+    display: inline-block;
+    left: -5px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+}
+/*
+ * 底部两大块
+ */
+.ct:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+.ct h3{
+    padding-bottom: 10px;
+    width: 200px;
+    border-bottom: 1px solid #ccc;
+
+}
+.ct ul{
+    margin-top: 10px;
+}
+.ct ul>li{
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+.ct .active{
+    width: 50%;
+    float: left;
+    padding-right: 20px;
+}
+.ct .skills{
+    width: 50%;
+    float: left;
+}
+.ct .skills li{
+    font-size: 18px;
+    font-weight: normal;
+}
+.ct li:before{
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: white;
+}
+.ct li:after{
+    content: "+";
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    left: 4px;
+}
+.ct .active li:after{
+    top: 4px;
+    left: 5px;
+}
+/*
+ * 响应式
+ */
+@media only screen and (min-width: 731px){
+    .ct .skills li{
+        float: left;
+        width: 50%;
+    }
+}
